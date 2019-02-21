@@ -1,4 +1,4 @@
-1.8.0.0
+1.9.0.0
 R-Cairo
 R-RSQLite
 R-SGPdata
@@ -6,12 +6,15 @@ R-colorspace
 R-doParallel
 R-doRNG
 R-equate
+R-ggplot2
 R-gridBase
 R-gtools
+R-jsonlite
 R-matrixStats
 R-munsell
 R-plotly
 R-quantreg
 R-randomNames
 R-sn
+R-tidyr
 R-toOrdinal
