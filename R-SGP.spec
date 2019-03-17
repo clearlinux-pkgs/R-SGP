@@ -4,48 +4,49 @@
 #
 Name     : R-SGP
 Version  : 1.9.0.0
-Release  : 5
+Release  : 6
 URL      : https://cran.r-project.org/src/contrib/SGP_1.9-0.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/SGP_1.9-0.0.tar.gz
 Summary  : Student Growth Percentiles & Percentile Growth Trajectories
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-Cairo
-Requires: R-RSQLite
-Requires: R-SGPdata
-Requires: R-colorspace
-Requires: R-doParallel
-Requires: R-doRNG
-Requires: R-equate
-Requires: R-ggplot2
-Requires: R-gridBase
-Requires: R-gtools
-Requires: R-jsonlite
-Requires: R-matrixStats
-Requires: R-plotly
-Requires: R-quantreg
-Requires: R-randomNames
-Requires: R-sn
-Requires: R-tidyr
-Requires: R-toOrdinal
+Requires: R-data.table
+Requires: R-gtable
+Requires: R-htmlwidgets
+Requires: R-lazyeval
+Requires: R-mnormt
+Requires: R-numDeriv
+Requires: R-plyr
+Requires: R-scales
+Requires: R-viridisLite
 BuildRequires : R-Cairo
 BuildRequires : R-RSQLite
 BuildRequires : R-SGPdata
 BuildRequires : R-colorspace
+BuildRequires : R-data.table
 BuildRequires : R-doParallel
 BuildRequires : R-doRNG
 BuildRequires : R-equate
 BuildRequires : R-ggplot2
 BuildRequires : R-gridBase
+BuildRequires : R-gtable
 BuildRequires : R-gtools
+BuildRequires : R-htmlwidgets
 BuildRequires : R-jsonlite
+BuildRequires : R-lazyeval
 BuildRequires : R-matrixStats
+BuildRequires : R-mnormt
+BuildRequires : R-munsell
+BuildRequires : R-numDeriv
 BuildRequires : R-plotly
+BuildRequires : R-plyr
 BuildRequires : R-quantreg
 BuildRequires : R-randomNames
+BuildRequires : R-scales
 BuildRequires : R-sn
 BuildRequires : R-tidyr
 BuildRequires : R-toOrdinal
+BuildRequires : R-viridisLite
 BuildRequires : buildreq-R
 
 %description
@@ -61,10 +62,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1550721831
+export SOURCE_DATE_EPOCH=1552853437
 
 %install
-export SOURCE_DATE_EPOCH=1550721831
+export SOURCE_DATE_EPOCH=1552853437
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -100,8 +101,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library SGP|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  SGP || :
 
 
 %files
