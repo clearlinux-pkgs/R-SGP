@@ -3,6 +3,7 @@ R-Cairo
 R-DBI
 R-MatrixModels
 R-RSQLite
+R-Rcpp
 R-SGPdata
 R-SparseM
 R-bibtex
@@ -12,11 +13,13 @@ R-colorspace
 R-data.table
 R-doParallel
 R-doRNG
+R-dplyr
 R-equate
 R-ggplot2
 R-gridBase
 R-gtable
 R-gtools
+R-htmltools
 R-htmlwidgets
 R-jsonlite
 R-lazyeval
@@ -25,6 +28,8 @@ R-memoise
 R-mnormt
 R-munsell
 R-numDeriv
+R-pillar
+R-pkgconfig
 R-pkgmaker
 R-plotly
 R-plyr
@@ -34,7 +39,9 @@ R-registry
 R-rngtools
 R-scales
 R-sn
+R-stringi
 R-tibble
 R-tidyr
 R-toOrdinal
 R-viridisLite
+R-xtable
