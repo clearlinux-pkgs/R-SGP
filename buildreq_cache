@@ -1,7 +1,9 @@
 1.9.0.0
 R-Cairo
+R-DBI
 R-RSQLite
 R-SGPdata
+R-blob
 R-colorspace
 R-data.table
 R-doParallel

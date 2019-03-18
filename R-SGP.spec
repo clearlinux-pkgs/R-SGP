@@ -4,24 +4,19 @@
 #
 Name     : R-SGP
 Version  : 1.9.0.0
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/SGP_1.9-0.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/SGP_1.9-0.0.tar.gz
 Summary  : Student Growth Percentiles & Percentile Growth Trajectories
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-data.table
-Requires: R-gtable
-Requires: R-htmlwidgets
-Requires: R-lazyeval
-Requires: R-mnormt
-Requires: R-numDeriv
-Requires: R-plyr
-Requires: R-scales
-Requires: R-viridisLite
+Requires: R-DBI
+Requires: R-blob
 BuildRequires : R-Cairo
+BuildRequires : R-DBI
 BuildRequires : R-RSQLite
 BuildRequires : R-SGPdata
+BuildRequires : R-blob
 BuildRequires : R-colorspace
 BuildRequires : R-data.table
 BuildRequires : R-doParallel
@@ -62,10 +57,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552853437
+export SOURCE_DATE_EPOCH=1552870498
 
 %install
-export SOURCE_DATE_EPOCH=1552853437
+export SOURCE_DATE_EPOCH=1552870498
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
