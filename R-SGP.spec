@@ -4,18 +4,29 @@
 #
 Name     : R-SGP
 Version  : 1.9.0.0
-Release  : 8
+Release  : 9
 URL      : https://cran.r-project.org/src/contrib/SGP_1.9-0.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/SGP_1.9-0.0.tar.gz
 Summary  : Student Growth Percentiles & Percentile Growth Trajectories
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-DBI
-Requires: R-blob
+Requires: R-MatrixModels
+Requires: R-SparseM
+Requires: R-bibtex
+Requires: R-bit64
+Requires: R-memoise
+Requires: R-pkgmaker
+Requires: R-registry
+Requires: R-rngtools
+Requires: R-tibble
 BuildRequires : R-Cairo
 BuildRequires : R-DBI
+BuildRequires : R-MatrixModels
 BuildRequires : R-RSQLite
 BuildRequires : R-SGPdata
+BuildRequires : R-SparseM
+BuildRequires : R-bibtex
+BuildRequires : R-bit64
 BuildRequires : R-blob
 BuildRequires : R-colorspace
 BuildRequires : R-data.table
@@ -30,15 +41,20 @@ BuildRequires : R-htmlwidgets
 BuildRequires : R-jsonlite
 BuildRequires : R-lazyeval
 BuildRequires : R-matrixStats
+BuildRequires : R-memoise
 BuildRequires : R-mnormt
 BuildRequires : R-munsell
 BuildRequires : R-numDeriv
+BuildRequires : R-pkgmaker
 BuildRequires : R-plotly
 BuildRequires : R-plyr
 BuildRequires : R-quantreg
 BuildRequires : R-randomNames
+BuildRequires : R-registry
+BuildRequires : R-rngtools
 BuildRequires : R-scales
 BuildRequires : R-sn
+BuildRequires : R-tibble
 BuildRequires : R-tidyr
 BuildRequires : R-toOrdinal
 BuildRequires : R-viridisLite
@@ -57,10 +73,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552870498
+export SOURCE_DATE_EPOCH=1552883276
 
 %install
-export SOURCE_DATE_EPOCH=1552870498
+export SOURCE_DATE_EPOCH=1552883276
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
