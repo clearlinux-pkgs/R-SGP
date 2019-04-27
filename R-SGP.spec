@@ -4,7 +4,7 @@
 #
 Name     : R-SGP
 Version  : 1.9.0.0
-Release  : 10
+Release  : 11
 URL      : https://cran.r-project.org/src/contrib/SGP_1.9-0.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/SGP_1.9-0.0.tar.gz
 Summary  : Student Growth Percentiles & Percentile Growth Trajectories
