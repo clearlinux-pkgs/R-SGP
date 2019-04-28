@@ -44,6 +44,7 @@ R-sn
 R-stringi
 R-tibble
 R-tidyr
+R-tidyselect
 R-toOrdinal
 R-viridisLite
 R-xtable

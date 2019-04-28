@@ -4,14 +4,13 @@
 #
 Name     : R-SGP
 Version  : 1.9.0.0
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/SGP_1.9-0.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/SGP_1.9-0.0.tar.gz
 Summary  : Student Growth Percentiles & Percentile Growth Trajectories
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-foreach
-Requires: R-iterators
+Requires: R-tidyselect
 BuildRequires : R-Cairo
 BuildRequires : R-DBI
 BuildRequires : R-MatrixModels
@@ -57,6 +56,7 @@ BuildRequires : R-sn
 BuildRequires : R-stringi
 BuildRequires : R-tibble
 BuildRequires : R-tidyr
+BuildRequires : R-tidyselect
 BuildRequires : R-toOrdinal
 BuildRequires : R-viridisLite
 BuildRequires : R-xtable
@@ -75,10 +75,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1556468538
+export SOURCE_DATE_EPOCH=1556482703
 
 %install
-export SOURCE_DATE_EPOCH=1556468538
+export SOURCE_DATE_EPOCH=1556482703
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
