@@ -15,12 +15,14 @@ R-doParallel
 R-doRNG
 R-dplyr
 R-equate
+R-foreach
 R-ggplot2
 R-gridBase
 R-gtable
 R-gtools
 R-htmltools
 R-htmlwidgets
+R-iterators
 R-jsonlite
 R-lazyeval
 R-matrixStats
