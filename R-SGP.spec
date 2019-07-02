@@ -4,13 +4,33 @@
 #
 Name     : R-SGP
 Version  : 1.9.0.0
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/SGP_1.9-0.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/SGP_1.9-0.0.tar.gz
 Summary  : Student Growth Percentiles & Percentile Growth Trajectories
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-tidyselect
+Requires: R-Cairo
+Requires: R-RSQLite
+Requires: R-colorspace
+Requires: R-crayon
+Requires: R-data.table
+Requires: R-digest
+Requires: R-doParallel
+Requires: R-doRNG
+Requires: R-equate
+Requires: R-foreach
+Requires: R-gridBase
+Requires: R-gtools
+Requires: R-iterators
+Requires: R-jsonlite
+Requires: R-matrixStats
+Requires: R-plotly
+Requires: R-quantreg
+Requires: R-randomNames
+Requires: R-sn
+Requires: R-toOrdinal
+Requires: R-withr
 BuildRequires : R-Cairo
 BuildRequires : R-DBI
 BuildRequires : R-MatrixModels
@@ -22,7 +42,9 @@ BuildRequires : R-bibtex
 BuildRequires : R-bit64
 BuildRequires : R-blob
 BuildRequires : R-colorspace
+BuildRequires : R-crayon
 BuildRequires : R-data.table
+BuildRequires : R-digest
 BuildRequires : R-doParallel
 BuildRequires : R-doRNG
 BuildRequires : R-dplyr
@@ -59,6 +81,7 @@ BuildRequires : R-tidyr
 BuildRequires : R-tidyselect
 BuildRequires : R-toOrdinal
 BuildRequires : R-viridisLite
+BuildRequires : R-withr
 BuildRequires : R-xtable
 BuildRequires : buildreq-R
 
@@ -75,10 +98,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1556482703
+export SOURCE_DATE_EPOCH=1562029300
 
 %install
-export SOURCE_DATE_EPOCH=1556482703
+export SOURCE_DATE_EPOCH=1562029300
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
