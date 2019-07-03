@@ -4,14 +4,17 @@
 #
 Name     : R-SGP
 Version  : 1.9.0.0
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/SGP_1.9-0.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/SGP_1.9-0.0.tar.gz
 Summary  : Student Growth Percentiles & Percentile Growth Trajectories
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-Cairo
+Requires: R-DBI
 Requires: R-RSQLite
+Requires: R-SGPdata
+Requires: R-blob
 Requires: R-colorspace
 Requires: R-crayon
 Requires: R-data.table
@@ -25,21 +28,19 @@ Requires: R-gtools
 Requires: R-iterators
 Requires: R-jsonlite
 Requires: R-matrixStats
+Requires: R-memoise
+Requires: R-munsell
+Requires: R-pkgmaker
 Requires: R-plotly
 Requires: R-quantreg
 Requires: R-randomNames
+Requires: R-rngtools
 Requires: R-sn
 Requires: R-toOrdinal
-Requires: R-withr
 BuildRequires : R-Cairo
 BuildRequires : R-DBI
-BuildRequires : R-MatrixModels
 BuildRequires : R-RSQLite
-BuildRequires : R-Rcpp
 BuildRequires : R-SGPdata
-BuildRequires : R-SparseM
-BuildRequires : R-bibtex
-BuildRequires : R-bit64
 BuildRequires : R-blob
 BuildRequires : R-colorspace
 BuildRequires : R-crayon
@@ -47,42 +48,22 @@ BuildRequires : R-data.table
 BuildRequires : R-digest
 BuildRequires : R-doParallel
 BuildRequires : R-doRNG
-BuildRequires : R-dplyr
 BuildRequires : R-equate
 BuildRequires : R-foreach
-BuildRequires : R-ggplot2
 BuildRequires : R-gridBase
-BuildRequires : R-gtable
 BuildRequires : R-gtools
-BuildRequires : R-htmltools
-BuildRequires : R-htmlwidgets
 BuildRequires : R-iterators
 BuildRequires : R-jsonlite
-BuildRequires : R-lazyeval
 BuildRequires : R-matrixStats
 BuildRequires : R-memoise
-BuildRequires : R-mnormt
 BuildRequires : R-munsell
-BuildRequires : R-numDeriv
-BuildRequires : R-pillar
-BuildRequires : R-pkgconfig
 BuildRequires : R-pkgmaker
 BuildRequires : R-plotly
-BuildRequires : R-plyr
 BuildRequires : R-quantreg
 BuildRequires : R-randomNames
-BuildRequires : R-registry
 BuildRequires : R-rngtools
-BuildRequires : R-scales
 BuildRequires : R-sn
-BuildRequires : R-stringi
-BuildRequires : R-tibble
-BuildRequires : R-tidyr
-BuildRequires : R-tidyselect
 BuildRequires : R-toOrdinal
-BuildRequires : R-viridisLite
-BuildRequires : R-withr
-BuildRequires : R-xtable
 BuildRequires : buildreq-R
 
 %description
@@ -97,13 +78,13 @@ longitudinal assessment data.  Functions use quantile regression to estimate the
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1562029300
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1562189417
 
 %install
-export SOURCE_DATE_EPOCH=1562029300
+export SOURCE_DATE_EPOCH=1562189417
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -132,7 +113,7 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
