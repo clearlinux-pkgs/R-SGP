@@ -4,17 +4,14 @@
 #
 Name     : R-SGP
 Version  : 1.9.0.0
-Release  : 19
+Release  : 20
 URL      : https://cran.r-project.org/src/contrib/SGP_1.9-0.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/SGP_1.9-0.0.tar.gz
 Summary  : Student Growth Percentiles & Percentile Growth Trajectories
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-Cairo
-Requires: R-DBI
 Requires: R-RSQLite
-Requires: R-SGPdata
-Requires: R-blob
 Requires: R-colorspace
 Requires: R-crayon
 Requires: R-data.table
@@ -28,14 +25,11 @@ Requires: R-gtools
 Requires: R-iterators
 Requires: R-jsonlite
 Requires: R-matrixStats
-Requires: R-memoise
-Requires: R-munsell
-Requires: R-pkgmaker
 Requires: R-plotly
 Requires: R-quantreg
 Requires: R-randomNames
-Requires: R-rngtools
 Requires: R-sn
+Requires: R-stringi
 Requires: R-toOrdinal
 BuildRequires : R-Cairo
 BuildRequires : R-DBI
@@ -63,6 +57,7 @@ BuildRequires : R-quantreg
 BuildRequires : R-randomNames
 BuildRequires : R-rngtools
 BuildRequires : R-sn
+BuildRequires : R-stringi
 BuildRequires : R-toOrdinal
 BuildRequires : buildreq-R
 
@@ -79,10 +74,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562189417
+export SOURCE_DATE_EPOCH=1562448206
 
 %install
-export SOURCE_DATE_EPOCH=1562189417
+export SOURCE_DATE_EPOCH=1562448206
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
